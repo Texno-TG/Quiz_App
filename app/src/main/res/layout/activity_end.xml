@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient_bg"
+    android:layout_height="match_parent"
+    tools:context=".ActivityEnd">
+
+    <TextView
+        android:id="@+id/material_hour_tv"
+        android:fontFamily="@font/poppins_semi"
+        android:textStyle="bold"
+        android:textSize="26dp"
+        android:gravity="center"
+        android:text="AVTO TEST"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/material_hour_tv"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:visibility="gone"
+            android:id="@+id/animationAngry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/animation_angry"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:visibility="gone"
+            android:id="@+id/animationLaugh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/animation_laud"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/allStates"
+            android:fontFamily="@font/poppins_semi"
+            android:textStyle="bold"
+            android:textSize="46dp"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/right_side"
+            android:fontFamily="@font/poppins_semi"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="#00FF00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/wrong_side"
+            android:fontFamily="@font/poppins_semi"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="#F23C34"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/up_side"
+            android:fontFamily="@font/poppins_semi"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="#F0A732"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

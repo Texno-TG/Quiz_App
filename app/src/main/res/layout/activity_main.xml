@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    tools:context=".MainActivity">
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:indeterminate="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/start_num"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/at_the_moment"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/end_num"/>
+
+    <LinearLayout
+        android:id="@+id/layout_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:weightSum="8"
+        android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/raqami"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="28dp"
+            android:fontFamily="@font/poppins_semi"
+            android:text="0"
+            android:textColor="#00FF00"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_semi"
+            android:text="/"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/raqami2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_semi"
+            android:text="0"
+            android:textColor="#F23C34"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+        <TextView
+            android:layout_weight="4"
+            android:id="@+id/material_hour_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semi"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="AVTO TEST 20"
+            android:textColor="#FFFFFF"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+       <LinearLayout
+           android:clickable="true"
+           android:onClick="getYakunlash"
+           android:layout_marginTop="6dp"
+           android:layout_marginRight="8dp"
+           android:layout_weight="2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:background="@drawable/button_end"
+           android:orientation="vertical">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_gravity="center"
+               android:gravity="center_vertical"
+               android:paddingTop="6dp"
+               android:textSize="14dp"
+               android:text="Yakunlash"
+               android:textColor="@color/white"
+               android:fontFamily="@font/poppins_semi"
+               android:textStyle="bold" />
+
+       </LinearLayout>
+
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:fillViewport="true"
+        android:id="@+id/Question_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_bar">
+
+    <LinearLayout
+        android:background="@drawable/corner_layout"
+        android:layout_margin="24dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/savol"
+            android:fontFamily="@font/poppins_semi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/app_name"
+            android:layout_margin="18dp"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:clipToOutline="true"
+            android:background="@drawable/round_imge"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/action_image"
+            android:visibility="gone"/>
+
+
+
+
+
+
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/example_answerview"
+            android:padding="12dp"
+            android:layout_below="@id/Question_place"
+            android:paddingTop="22dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="wrap_content">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:visibility="gone"
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_rawRes="@raw/animation28"/>
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    tools:context=".ListActivity">
+
+    <TextView
+        android:id="@+id/material_hour_tv"
+        android:fontFamily="@font/poppins_semi"
+        android:textStyle="bold"
+        android:textSize="26dp"
+        android:gravity="center"
+        android:text="AVTO TEST"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/biletlar"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/material_hour_tv"
+        android:padding="12dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_height="wrap_content">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
